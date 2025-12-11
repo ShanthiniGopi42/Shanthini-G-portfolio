@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>G. Shanthini — Portfolio</title>
+  <meta name="description" content="Projects and skills of G. Shanthini, ECE student curious about hardware and software." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header" id="top">
+    <a class="brand" href="#top">G. Shanthini</a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle dark mode">○</button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">ECE Student • Exploring Embedded Systems & Software</p>
+
+      <h1>Building my foundation in programming, electronics, and IoT.</h1>
+
+      <p class="lead">
+        I enjoy learning how software and hardware work together. From writing simple programs to creating small IoT prototypes, 
+        I’m focused on improving step by step—understanding errors, fixing them, and turning ideas into working results.
+      </p>
+
+      <div class="cta">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn" href="#" aria-disabled="true" title="Resume coming soon">Résumé — Coming Soon</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section reveal">
+    <h2>About Me</h2>
+    <div class="about-grid">
+      <img src="me.jpg" alt="G. Shanthini" class="profile-photo" />
+      <div>
+        <p>
+          I’m an ECE student passionate about understanding both the software and hardware sides of engineering.
+          I enjoy breaking down problems, learning new concepts, and applying them through hands-on projects.
+          Whether it’s debugging code or connecting circuits on the ESP32, I like building things that actually work.
+         I’m still early in my journey, but I’m focused, consistent, and excited to grow.
+        </p>
+
+        <ul class="highlights">
+          <li>Interested in embedded systems, IoT, and real-world automation</li>
+          <li>Enjoy working in teams and quick lab prototyping</li>
+          <li>Practicing programming and debugging regularly</li>
+          <li>Open to internships, collaboration, and new learning opportunities</li>
+        </ul>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section reveal">
+    <h2>Skills</h2>
+    <p class="section-lead">
+      A mix of programming, electronics, and embedded systems skills I’m building step by step.
+    </p>
+
+    <div class="chips">
+      <span class="chip">C++</span>
+      <span class="chip">Python</span>
+      <span class="chip">MATLAB</span>
+      <span class="chip">Circuit Design</span>
+      <span class="chip">IoT</span>
+      <span class="chip">Problem Solving</span>
+      <span class="chip">Team Work</span>
+      <span class="chip">Embedded Systems</span>
+      <span class="chip">ESP32</span>
+      <span class="chip">Arduino</span>
+      <span class="chip">Web development basics</span>
+      <span class="chip">Sensors</span>
+
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section reveal">
+    <h2>Projects</h2>
+    <p class="section-lead">A few recent works. More coming soon.</p>
+    <div id="project-grid" class="project-grid"><!-- populated by JS --></div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section reveal">
+    <h2>Contact</h2>
+    <p class="section-lead">Reach out for internship opportunities or collaborations.</p>
+    <div class="contact-cards">
+      <a class="card" href="mailto:shanthinig42@gmail.com">
+        <h3>Email</h3>
+        <p>shanthinig42@gmail.com</p>
+      </a>
+      <a class="card" href="https://www.linkedin.com/in/shanthini-g-475b602a2" target="_blank" rel="noopener">
+        <h3>LinkedIn</h3>
+        <p>/in/shanthini-g-475b602a2</p>
+      </a>
+      <div class="card" style="cursor:default">
+        <h3>GitHub</h3>
+        <p>Coming Soon</p>
+      </div>
+    </div>
+
+    <!-- Simple mailto form (no backend needed) -->
+    <form class="contact-form" id="contact-form">
+      <input name="name" placeholder="Your name" required />
+      <input name="email" type="email" placeholder="Your email" required />
+      <textarea name="message" rows="4" placeholder="Your message" required></textarea>
+      <button type="submit" class="btn primary">Send Message</button>
+      <p id="form-msg" class="form-msg" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> G. Shanthini · Built with HTML, CSS & JS</p>
+  </footer>
+
+  <!-- Project Details Modal (must be inside <body>, just before </body>) -->
+  <div id="project-backdrop" class="backdrop" hidden></div>
+  <div id="project-modal" class="modal" hidden aria-modal="true" role="dialog">
+    <button id="modal-close" class="modal-close" aria-label="Close">✕</button>
+    <img id="modal-img" alt="" class="modal-img" />
+    <div class="modal-body">
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc" class="modal-desc"></p>
+      <ul id="modal-bullets" class="modal-bullets"></ul>
+      <div id="modal-tags" class="modal-tags"></div>
+      <a id="modal-link" class="btn primary" target="_blank" rel="noopener">View Project</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
